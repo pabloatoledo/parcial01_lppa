@@ -22,39 +22,50 @@
             </nav>
         </header>
         <main>
-            <p>Complete el formulario para registrarse</p>
-
             <form action="#">
+                <p>Complete el formulario para registrarse</p>
+
                 <div class="formdatbas">
                     <div class="datbascol">
-                        <div>
+                        <div class="itemdatbas">
                             <label for="nombre">Nombre: </label>
                             <input type="text" id="nombre" placeholder="Tu nombre">
                         </div>
-                        <div>
+                        <div class="itemdatbas">
                             <label for="apellido">Apellido: </label>
                             <input type="text" id="apellido" placeholder="Tu apellido">
                         </div>
                     </div>
                     <div class="datbascol">
-                        <div>
+                        <div class="itemdatbas">
                             <label for="correo">Email: </label>
                             <input type="text" id="correo" placeholder="Tu correo electrónico">
                         </div>
-                        <div>
+                        <div class="itemdatbas">
                             <label for="edad">Edad: </label>
                             <input type="text" id="edad" placeholder="Tu edad">
                         </div>
                     </div>
                 </div>
 
-                <p>Sexo:</p>
-                <label for="mujer">Mujer</label>
-                <input type="radio" id="mujer" name="sexo">
-                <label for="hombre">Hombre</label>
-                <input type="radio" id="hombre" name="sexo">
-                <label for="sexo_otro">Otro</label>
-                <input type="radio" id="sexo_otro" name="sexo">
+                <div class="div-sexo">
+                    <p>Sexo:</p>
+                    <div class="rad-sexo">
+                        <div>
+                            <label for="mujer">Mujer</label>
+                            <input type="radio" id="mujer" name="sexo">
+                        </div>
+                        <div>
+                            <label for="hombre">Hombre</label>
+                            <input type="radio" id="hombre" name="sexo">
+                        </div>
+                        <div>
+                            <label for="sexo_otro">Otro</label>
+                            <input type="radio" id="sexo_otro" name="sexo">
+                        </div>
+                    </div>
+                </div>
+                
 
                 <p>Temas de interés:</p>
 

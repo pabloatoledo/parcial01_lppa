@@ -6,19 +6,26 @@ ul {
     display: flex;
     justify-content: space-around;
 }
-input {
-    margin: 10px;
+input[type=text]{
+    margin: 10px 0;
+    width: 400px;
 }
 
 .formdatbas {
     justify-content: space-around;
-    max-width: 70%;
-    margin-left: 15%;
     display: flex;
     flex-flow: wrap;
 }
 .datbascol {
     min-width: 300px;
+}
+.itemdatbas {
+    display: flex;
+    flex-direction: column;
+}
+.rad-sexo {
+    display: flex;
+    justify-content: space-around;
 }
 .red-soc {
     display: flex;
@@ -41,14 +48,12 @@ a {
     font-size: 2rem;
     color: black;
 }
-
 form {
     background-color: #aaaaaa;
 }
-
 p {
+    text-align: center;
     font-size: 25px;
-    margin-left: 25px;
     color: #353535;
 }
 input {
@@ -63,8 +68,14 @@ label {
     font-size: 18px;
 }
 
-
 a:hover {
     color: red;
+}
+
+.div-sexo {
+    border: 1px solid;
+}
+.div-sexo p {
+    margin-top: 0;
 }
 
