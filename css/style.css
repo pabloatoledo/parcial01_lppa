@@ -6,11 +6,17 @@ ul {
     display: flex;
     justify-content: space-around;
 }
+form {
+    max-width: 900px;
+    margin: 0 auto;
+}
 input[type=text]{
     margin: 10px 0;
     width: 400px;
 }
-
+p {
+    margin: 12px;
+}
 .formdatbas {
     justify-content: space-around;
     display: flex;
@@ -23,23 +29,28 @@ input[type=text]{
     display: flex;
     flex-direction: column;
 }
-.rad-sexo {
+.rad-sexo, .chk-interes {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 10px;
 }
+.div-sexo, .div-interes {
+    margin-top: 5px;
+}
+
 .red-soc {
     display: flex;
     justify-content: space-around;
 }
 .red-soc img {
-    max-width: 50px;
+    max-width: 25px;
 }
 
 /* ---------------------- Estilos ------------------------------*/
-
 nav {
-    background-color: gray;
+    background-color: grey;
 }
+
 li {
     list-style: none;
 }
@@ -48,12 +59,12 @@ a {
     font-size: 2rem;
     color: black;
 }
-form {
+main {
     background-color: #aaaaaa;
 }
 p {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color: #353535;
 }
 input {
@@ -72,10 +83,10 @@ a:hover {
     color: red;
 }
 
-.div-sexo {
+.div-sexo, .div-interes{
     border: 1px solid;
+    border-radius: 3px;
 }
-.div-sexo p {
-    margin-top: 0;
-}
+
+
 
