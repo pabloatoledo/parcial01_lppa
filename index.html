@@ -25,23 +25,23 @@
             <form action="#">
                 <p>Complete el formulario para registrarse</p>
 
-                <div class="formdatbas">
-                    <div class="datbascol">
-                        <div class="itemdatbas">
+                <div class="form-dat">
+                    <div class="col-dat">
+                        <div class="item-dat">
                             <label for="nombre">Nombre: </label>
                             <input type="text" id="nombre" placeholder="Tu nombre">
                         </div>
-                        <div class="itemdatbas">
+                        <div class="item-dat">
                             <label for="apellido">Apellido: </label>
                             <input type="text" id="apellido" placeholder="Tu apellido">
                         </div>
                     </div>
-                    <div class="datbascol">
-                        <div class="itemdatbas">
+                    <div class="col-dat">
+                        <div class="item-dat">
                             <label for="correo">Email: </label>
                             <input type="text" id="correo" placeholder="Tu correo electrónico">
                         </div>
-                        <div class="itemdatbas">
+                        <div class="item-dat">
                             <label for="edad">Edad: </label>
                             <input type="text" id="edad" placeholder="Tu edad">
                         </div>
@@ -92,17 +92,21 @@
                     </div>
                 </div>
                 
-
-                <label for="pais">País:</label>
-                <select id="pais" name="pais">
-                <option value="Chevrolet">Argentina</option>
-                <option value="Fiat">Chile</option>
-                <option value="Ford">Brasil</option>
-                <option value="Toyota">Uruguay</option>
-                </select>
+                <div class="opc-pais">
+                    <p>País:</p>
+                    <div class="item-pais">
+                        <select id="pais" name="pais">
+                            <option value="Argentina">Argentina</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Uruguay">Uruguay</option>
+                        </select>
+                    </div>
+                </div>
+                
 
                 <p>Comentarios:</p>
-                <textarea name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Tus comentarios"></textarea>
+                <textarea name="comentarios" id="comentarios" placeholder="Tus comentarios"></textarea>
 
                 <input type="button" value="Enviar">
                 

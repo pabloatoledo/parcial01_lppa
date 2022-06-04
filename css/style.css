@@ -17,15 +17,19 @@ input[type=text]{
 p {
     margin: 12px;
 }
-.formdatbas {
+select {
+    width: 300px;
+}
+
+.form-dat {
     justify-content: space-around;
     display: flex;
     flex-flow: wrap;
 }
-.datbascol {
+.col-dat {
     min-width: 300px;
 }
-.itemdatbas {
+.item-dat {
     display: flex;
     flex-direction: column;
 }
@@ -34,8 +38,11 @@ p {
     justify-content: space-around;
     margin-bottom: 10px;
 }
-.div-sexo, .div-interes {
+.div-sexo, .div-interes, .opc-pais {
     margin-top: 5px;
+}
+.item-pais {
+    margin: 12px;
 }
 
 .red-soc {
@@ -44,6 +51,10 @@ p {
 }
 .red-soc img {
     max-width: 25px;
+}
+
+.opc-pais label {
+    margin: 12px;
 }
 
 /* ---------------------- Estilos ------------------------------*/
@@ -78,14 +89,24 @@ input {
 label {
     font-size: 18px;
 }
+select {
+    border-radius: 5px;
+    text-align: center;
+}
 
 a:hover {
     color: red;
 }
 
-.div-sexo, .div-interes{
+.form-dat, .div-sexo, .div-interes, .opc-pais{
     border: 1px solid;
     border-radius: 3px;
+    border-color: #353535;
+}
+.opc-pais {
+    text-align: center;
+    font-size: 20px;
+    color: #353535;
 }
 
 
