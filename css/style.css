@@ -1,0 +1,70 @@
+nav {
+    padding: 20px 0;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+}
+input {
+    margin: 10px;
+}
+
+.formdatbas {
+    justify-content: space-around;
+    max-width: 70%;
+    margin-left: 15%;
+    display: flex;
+    flex-flow: wrap;
+}
+.datbascol {
+    min-width: 300px;
+}
+.red-soc {
+    display: flex;
+    justify-content: space-around;
+}
+.red-soc img {
+    max-width: 50px;
+}
+
+/* ---------------------- Estilos ------------------------------*/
+
+nav {
+    background-color: gray;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+form {
+    background-color: #aaaaaa;
+}
+
+p {
+    font-size: 25px;
+    margin-left: 25px;
+    color: #353535;
+}
+input {
+    border-radius: 7px;
+    border-color:beige;
+    color: #353535;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+label {
+    font-size: 18px;
+}
+
+
+a:hover {
+    color: red;
+}
+
