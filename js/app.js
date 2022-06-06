@@ -99,8 +99,6 @@ window.onload = function() {
         errPais.classList.add("oculto")
     }
 
-
-
     //----------------- validaciones -----------------//
 
     function valNom (e) {
