@@ -10,7 +10,15 @@ window.onload = function() {
     var errMail = document.getElementById("errMail")
     var edad = document.getElementById("edad")
     var errEdad = document.getElementById("errEdad")
-    
+    var errSexo = document.getElementById("errSexo")
+    var errInt = document.getElementById("errInt")
+    var intMus = document.getElementById("musica")
+    var intDep = document.getElementById("deporte")
+    var intJue = document.getElementById("juego")
+    var intTec = document.getElementById("tecnologia")
+    var intTemOtro = document.getElementById("tema_otro")
+
+    var btnEviar = document.getElementById("enviar")
     
     //----------------- detecta acciones en los input -----------------//
 
@@ -22,6 +30,8 @@ window.onload = function() {
     email.addEventListener("focus", remErrMail)
     edad.addEventListener("blur", valEdad)
     edad.addEventListener("focus", remErrEdad)
+
+    btnEviar.addEventListener("click", verTodo)
 
 
     //----------------- manejo mensajes de error -----------------//
@@ -58,6 +68,18 @@ window.onload = function() {
         errEdad.classList.add("oculto")
         edad.style.borderColor = "beige"
     }
+    function showErrSexo () {
+        errSexo.classList.remove("oculto")
+    }
+    function remErrSexo () {
+        errSexo.classList.add("oculto")
+    }
+    function showErrInt () {
+        errInt.classList.remove("oculto")
+    }
+    function remErrInt () {
+        errInt.classList.add("oculto")
+    }
 
 
 
@@ -89,6 +111,31 @@ window.onload = function() {
         if (edad.value < 1 || edad.value > 100 || !soloNro.test(edad.value)) {
             showErrEdad()
         }
+    }
+
+    function valSexoVacio () {
+        if(!document.querySelector('input[name="sexo"]:checked')) {
+            showErrSexo()
+        } else {
+            remErrSexo()
+        }
+    }
+
+    function valIntVacio () {
+        if(!intMus.checked && !intDep.checked && !intJue.checked && !intTec.checked && !intTemOtro.checked) {
+            showErrInt()
+        } else {
+            remErrInt()
+        }
+    }
+
+    function verTodo () {
+        valNom()
+        valApe()
+        valEmail()
+        valEdad()
+        valSexoVacio()
+        valIntVacio()
     }
 
  }
