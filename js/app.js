@@ -104,7 +104,7 @@ window.onload = function() {
     //----------------- validaciones -----------------//
 
     function valNom (e) {
-        var soloLetra = /^[ a-zA-Z]+$/
+        var soloLetra = /^[ a-zA-ZáéíóúÁÉÍÓÚñ]+$/
         if (nombre.value.length < 3 || !soloLetra.test(nombre.value)) {
             showErrNom()
         } else {
@@ -113,7 +113,7 @@ window.onload = function() {
     }
 
     function valApe () {
-        var soloLetra = /^[ a-zA-Z]+$/
+        var soloLetra = /^[ a-zA-ZáéíóúÁÉÍÓÚñ]+$/
         if (apellido.value.length < 3 || !soloLetra.test(apellido.value)) {
             showErrApe()
         } else {
