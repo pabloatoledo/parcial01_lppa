@@ -17,6 +17,8 @@ window.onload = function() {
     var intJue = document.getElementById("juego")
     var intTec = document.getElementById("tecnologia")
     var intTemOtro = document.getElementById("tema_otro")
+    var errPais = document.getElementById("errPais")
+    var pais = document.getElementById("pais")
 
     var btnEviar = document.getElementById("enviar")
     
@@ -31,7 +33,7 @@ window.onload = function() {
     edad.addEventListener("blur", valEdad)
     edad.addEventListener("focus", remErrEdad)
 
-    btnEviar.addEventListener("click", verTodo)
+    btnEviar.addEventListener("click", verifTodo)
 
 
     //----------------- manejo mensajes de error -----------------//
@@ -79,6 +81,12 @@ window.onload = function() {
     }
     function remErrInt () {
         errInt.classList.add("oculto")
+    }
+    function showErrPais () {
+        errPais.classList.remove("oculto")
+    }
+    function remErrPais () {
+        errPais.classList.add("oculto")
     }
 
 
@@ -129,13 +137,22 @@ window.onload = function() {
         }
     }
 
-    function verTodo () {
+    function valPais () {
+        if (pais.value == "") {
+            showErrPais()
+        } else {
+            remErrPais()
+        }
+    }
+
+    function verifTodo () {
         valNom()
         valApe()
         valEmail()
         valEdad()
         valSexoVacio()
         valIntVacio()
+        valPais()
     }
 
  }
