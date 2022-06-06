@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    //----------------- identifica campos -----------------//
+    //----------------- variables -----------------//
 
     var nombre = document.getElementById("nombre")
     var errNom = document.getElementById("errNom")
@@ -19,8 +19,10 @@ window.onload = function() {
     var intTemOtro = document.getElementById("tema_otro")
     var errPais = document.getElementById("errPais")
     var pais = document.getElementById("pais")
-
     var btnEviar = document.getElementById("enviar")
+    var modal = document.getElementById("modal_ok")
+    var span = document.getElementsByClassName("close")[0]
+    var regOk = 0
     
     //----------------- detecta acciones en los input -----------------//
 
@@ -32,9 +34,17 @@ window.onload = function() {
     email.addEventListener("focus", remErrMail)
     edad.addEventListener("blur", valEdad)
     edad.addEventListener("focus", remErrEdad)
-
     btnEviar.addEventListener("click", verifTodo)
 
+    span.onclick = function() {
+        modal.style.display = "none";
+        }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
     //----------------- manejo mensajes de error -----------------//
 
@@ -97,6 +107,8 @@ window.onload = function() {
         var soloLetra = /^[ a-zA-Z]+$/
         if (nombre.value.length < 3 || !soloLetra.test(nombre.value)) {
             showErrNom()
+        } else {
+            regOk++
         }
     }
 
@@ -104,6 +116,8 @@ window.onload = function() {
         var soloLetra = /^[ a-zA-Z]+$/
         if (apellido.value.length < 3 || !soloLetra.test(apellido.value)) {
             showErrApe()
+        } else {
+            regOk++
         }
     }
 
@@ -111,6 +125,8 @@ window.onload = function() {
         var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/
         if (!emailRegex.test(email.value)) {
             showErrMail()
+        } else {
+            regOk++
         }
     }
 
@@ -118,6 +134,8 @@ window.onload = function() {
         var soloNro = /^[0-9]+$/
         if (edad.value < 1 || edad.value > 100 || !soloNro.test(edad.value)) {
             showErrEdad()
+        } else {
+            regOk++
         }
     }
 
@@ -126,6 +144,7 @@ window.onload = function() {
             showErrSexo()
         } else {
             remErrSexo()
+            regOk++
         }
     }
 
@@ -134,6 +153,7 @@ window.onload = function() {
             showErrInt()
         } else {
             remErrInt()
+            regOk++
         }
     }
 
@@ -142,10 +162,12 @@ window.onload = function() {
             showErrPais()
         } else {
             remErrPais()
+            regOk++
         }
     }
 
     function verifTodo () {
+        regOk = 0
         valNom()
         valApe()
         valEmail()
@@ -153,6 +175,12 @@ window.onload = function() {
         valSexoVacio()
         valIntVacio()
         valPais()
+        if (regOk == 7) {
+            openModal()
+        }
     }
 
- }
+    function openModal () {
+        modal.style.display = "block";
+    }
+}
